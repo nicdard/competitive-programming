@@ -29,6 +29,11 @@
  * Anytime the sum is greater than max we update the maximum. 
  * If the sum is negative, we reset the current sum to 0. This way we are ignoring all 
  * negative-sum prefixes and we consider only subarrays starting with a positive number.
+ * 
+ * Complexity: O(n) both for space and time.
+ * Note: We could have not stored the numbers by consuming the input stream to keep the space O(1).
+ *       The solution is however done this way just to provide an implementation independent from 
+ *       the driver code.
  */
 
 #include<bits/stdc++.h>
