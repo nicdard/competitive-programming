@@ -50,11 +50,17 @@ int main(void) {
         }
         for (i = N - 1; i >= 0; i--) {
             if (V[i] > max) {
-                cout << V[i] << ' ';
                 max = V[i];
+            } else {
+                V[i] = -1;
             }
         }
-        cout << '\n';
+        for (i=0; i < N; i++) {
+            if (V[i] > -1) {
+                cout << V[i] << " ";
+            }
+        }
+        cout << endl;
     }
     return 0;
 }
