@@ -18,8 +18,8 @@
  * 
  * Constraints:
  * 1 ≤ T ≤ 110
- * 1 ≤ N ≤ 106
- * -107 ≤ A[i] <= 107
+ * 1 ≤ N ≤ 10^6
+ * -10^7 ≤ A[i] <= 10^7
  * 
  * SOLUTION DESCRIPTION:
  * 
