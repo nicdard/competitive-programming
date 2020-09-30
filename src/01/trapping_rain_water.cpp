@@ -80,7 +80,7 @@ int main() {
             vec.push_back(x);
         }
         long total = trapped_water(vec);
-        std::cout << total;
+        std::cout << total << std::endl;
         vec.clear(); 
     }
     return 0;
