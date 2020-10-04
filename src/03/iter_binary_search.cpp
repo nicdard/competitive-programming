@@ -11,22 +11,21 @@
  * If the value of the search key is less than the item in the middle of the interval, narrow the interval to the lower half. 
  * Otherwise narrow it to the upper half. Repeatedly check until the value is found or the interval is empty.
  * 
- * Complexity: O(log(n)) and O(log(n)) recursion call stack space.
+ * Complexity: O(log(n), O(1) additional space.
  */
-
 #include<iostream>
 #include<vector>
 
 int binary_search(std::vector<int> vec, int k, int start, int end) {
-    if (end >= start) {
+    while (end >= start) {
         int center = (end - start) / 2 + start;
         if (vec[center] == k) {
             return center;
         } else {
             if (vec[center] > k) {
-                return binary_search(vec, k, start, center - 1);
+                end = center - 1;
             } else {
-                return binary_search(vec, k, center + 1, end);
+                start = center + 1;
             }
         }
     }
@@ -49,4 +48,3 @@ int main() {
     vec.clear();
     return 0;
 }
-
